@@ -5,8 +5,10 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  Gatsby's hello-world starter with theme-ui
 </h1>
+
+gatsby-plugin-theme-ui is a Gatsby plugin that provides a simple way to implement a design system using the Theme UI library. It allows developers to define a theme object with design tokens such as colors, typography, and spacing, and generates CSS styles based on those tokens. The plugin also provides a set of React components for easy implementation of the design system in the application. It promotes consistency and ease of customization across the application's design.
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
@@ -14,41 +16,40 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1. **Create a Gatsby site.**
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the hello-world starter.
+   Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the hello-world starter.
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+   ```shell
+   # create a new Gatsby site using the hello-world starter
+   gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+   ```
 
-1.  **Start developing.**
+2. **Theme UI.**
 
-    Navigate into your new site’s directory and start it up.
+   gatsby-plugin-theme-ui is a plugin for the Gatsby framework that enables easy theming and styling of web applications. It uses Theme UI, a library that provides a set of customizable design tokens such as colors, typography, spacing, and layout, and allows developers to create consistent, cohesive designs across their applications.
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+   With gatsby-plugin-theme-ui, developers can define a theme object that includes their design tokens and pass it to the plugin, which will generate CSS styles based on those tokens. The plugin also provides a set of React components that can be used to implement the design system, such as a Box component for layout, a Text component for typography, and various input and form components.
 
-1.  **Open the source code and start editing!**
+   One of the benefits of using gatsby-plugin-theme-ui is that it allows for easy customization and theming of an application, as developers can simply update their theme object to change the design of the entire application. It also encourages the use of design systems and consistency across an application, which can lead to a better user experience.
 
-    Your site is now running at `http://localhost:8000`!
+   Overall, gatsby-plugin-theme-ui is a powerful tool for developers who want to create well-designed, responsive web applications using Gatsby and Theme UI.
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+   ```shell
+   npm install theme-ui @theme-ui/mdx gatsby-plugin-theme-ui @emotion/react @mdx-js/react
+   ```
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+   gatsby-config.js
 
-## 🚀 Quick start (Netlify)
+   ```shell
+   module.exports = {
+   plugins: ["gatsby-plugin-theme-ui"],
+   }
+   ```
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+3. **Open the source code and start editing!**
 
 ## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
 
     .
     ├── node_modules
@@ -61,39 +62,5 @@ A quick look at the top-level files and directories you'll see in a typical Gats
     ├── LICENSE
     ├── package.json
     └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
-
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-1.  **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On Netlify](https://netlify.com)
-
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
